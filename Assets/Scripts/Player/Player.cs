@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     private float _HP = 100;
+    public float HP =>_HP;
 
     public void TakeDamage(float damage)
     {
@@ -16,5 +14,4 @@ public class Player : MonoBehaviour
         _HP += health;
         if(_HP>100)_HP = 100;
     }
-    public float CurHP()=>_HP;
 }

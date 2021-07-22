@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class UI : MonoBehaviour
 {
     [SerializeField] private GameObject _player;
@@ -19,6 +16,6 @@ public class UI : MonoBehaviour
         if(GUI.Button(new Rect(20,70,100,20), "Self Heal"))
         _playerScript.GetHealth(20);
         
-        GUI.HorizontalSlider(new Rect(Screen.width/2 + 400,Screen.height - 20 ,150,40),_playerScript.CurHP(), 0, 100);      
+        GUI.HorizontalSlider(new Rect(Screen.width/2 + 400,Screen.height - 20 ,150,40),_playerScript.HP, 0, 100);      
     }  
 }
