@@ -5,24 +5,26 @@ using UnityEngine;
 public class IKTest : MonoBehaviour
 {
     [SerializeField] private bool _isActiveIK;
-     private Transform _lookObj;
     [SerializeField] private float _weightIK;
     private Animator _animator;
-    
+    private Transform _lookObj;
     void Start()
     {
         _animator = GetComponent<Animator>();
     }
     void Update()
     {
-        if(Physics.SphereCast(Vector3.up, 2f, Vector3.forward, out RaycastHit hitInfo, 3f))
+        if(Physics.SphereCast(transform.position, 2f ,transform.forward ,out RaycastHit _info, 2f))
         {
             _isActiveIK = true;
-            _lookObj = hitInfo.transform;
-
+            _lookObj = _info.transform;
+            _weightIK = 1f;
         }
-        else _isActiveIK = false;
-        
+        else 
+        {
+            _isActiveIK = false;
+            _weightIK = 0;
+        }
     }
     private void OnAnimatorIK()
     {
