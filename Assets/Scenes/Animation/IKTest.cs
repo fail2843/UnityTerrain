@@ -1,41 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class IKTest : MonoBehaviour
 {
-    [SerializeField] private bool _isActiveIK;
-    [SerializeField] private float _weightIK;
+    [SerializeField] private Transform _lookObj;
+    [SerializeField] private float _lookDistance = 3f;
+    private float _weightLookIK;
+
     private Animator _animator;
-    private Transform _lookObj;
+    private bool _isActiveIK;
     void Start()
     {
         _animator = GetComponent<Animator>();
     }
     void Update()
     {
-        if(Physics.SphereCast(transform.position, 2f ,transform.forward ,out RaycastHit _info, 2f))
-        {
+        if(Vector3.Distance(transform.position, _lookObj.position) <= _lookDistance)
             _isActiveIK = true;
-            _lookObj = _info.transform;
-            _weightIK = 1f;
-        }
-        else 
-        {
-            _isActiveIK = false;
-            _weightIK = 0;
-        }
-    }
-    private void OnAnimatorIK()
+        else _isActiveIK = false;
+    } 
+    private void OnAnimatorIK() => LookAtObj();
+    private void LookAtObj()
     {
         if(!_isActiveIK)
         {
-            _animator.SetLookAtWeight(0);
+            _weightLookIK = 0;
+            _animator.SetLookAtWeight(_weightLookIK);
             return;
         }
-
-        _animator.SetLookAtWeight(_weightIK);
+        _weightLookIK = 1;
+        _animator.SetLookAtWeight(_weightLookIK);
         _animator.SetLookAtPosition(_lookObj.position);
-
     }
 }
