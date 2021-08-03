@@ -1,30 +1,26 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IKHandTest : MonoBehaviour
 {
-    
     [SerializeField] private Transform _leftHandObj;
     [SerializeField] private Transform _rightHandObj;
     [SerializeField] private float _changeSpeed = 0.01f;
     [SerializeField] private float _minDistance = 1f;
     private bool _isActiveIK;
-    private Transform _targetObj;
     private float _weightIK;
+    private Transform _targetObj;
     private Animator _animator;
-    void Start()
+    private void Start()
     {
         _animator = GetComponent<Animator>();
         _targetObj = _rightHandObj.root.transform;
     }
     private void Update()
     {
-        if(Vector3.Distance(transform.position,_targetObj.position)<_minDistance)
-            _isActiveIK = true;
-            else _isActiveIK = false;
+        _isActiveIK = (Vector3.Distance(transform.position,_targetObj.position)<_minDistance);
     }
-    private void OnAnimatorIK()
+    private void OnAnimatorIK(int layerIndex)
     {
         PositionIK();
         RotationIK();

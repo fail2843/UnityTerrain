@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerTest : MonoBehaviour
@@ -15,10 +13,10 @@ public class PlayerTest : MonoBehaviour
     {
         _mouseX += Input.GetAxis("Mouse X");
 
-        float _vertical = Input.GetAxis("Vertical");
-        float _horizontal = Input.GetAxis("Mouse X");
+        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxis("Mouse X");
 
-        PlayerAnimation(_vertical, _horizontal);
+        PlayerAnimation(vertical, horizontal);
     }
     void FixedUpdate()
     {
