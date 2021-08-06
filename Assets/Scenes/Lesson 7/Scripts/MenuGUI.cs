@@ -22,9 +22,5 @@ public class MenuGUI : MonoBehaviour
 
            _isNormal=!_isNormal;
        }
-       if(GUI.Button(new Rect(20, 40, 180, 30), "Color Temperature"))
-       {
-           _volume.profile.
-       }
-   }
+    }
 }
