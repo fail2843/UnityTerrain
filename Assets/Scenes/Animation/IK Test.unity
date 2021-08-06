@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -716,7 +716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973742394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: 0.79, z: 0.15}
+  m_LocalPosition: {x: -0.502, y: 1.819, z: 0.15}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -934,10 +934,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13285382
-  m_Height: 0.5314153
+  m_Radius: 0.05941327
+  m_Height: 0.53141534
   m_Direction: 1
-  m_Center: {x: 0, y: -0.26570764, z: 0}
+  m_Center: {x: 0.0015175794, y: -0.26570806, z: -3.6629477e-10}
 --- !u!54 &486369941492559095
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -980,10 +980,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13311142
-  m_Height: 0.44370472
+  m_Radius: 0.0811167
+  m_Height: 0.4437048
   m_Direction: 1
-  m_Center: {x: 0, y: -0.22185236, z: 0}
+  m_Center: {x: -0.017624915, y: -0.22185248, z: 2.639539e-11}
 --- !u!144 &533500794172859618
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3541,10 +3541,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13285495
-  m_Height: 0.5314198
+  m_Radius: 0.061849248
+  m_Height: 0.5314199
   m_Direction: 1
-  m_Center: {x: 0, y: -0.2657099, z: 0}
+  m_Center: {x: 0.005863007, y: -0.26571402, z: 2.9326203e-10}
 --- !u!54 &8015639722484269967
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3912,10 +3912,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13311161
+  m_Radius: 0.08154973
   m_Height: 0.44370535
   m_Direction: 1
-  m_Center: {x: 0, y: -0.22185268, z: 0}
+  m_Center: {x: 0.020914854, y: -0.22185536, z: -2.3470427e-11}
 --- !u!1 &8825346661929290904
 GameObject:
   m_ObjectHideFlags: 0
